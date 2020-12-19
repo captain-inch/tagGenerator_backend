@@ -112,7 +112,9 @@ app.post("/checkuseravailability", (req, resp) => {
           }
         })
         .then(() => resp.json(exists))
-        .catch(() => resp.status(400).json("Error finding user availability"));
+        .catch((err) =>
+          resp.status(400).json("Error finding user availability", err)
+        );
     });
 });
 
