@@ -104,9 +104,10 @@ app.post("/checkuseravailability", (req, resp) => {
       if (user.length) {
         exists.email = false;
         console.log("Email already exists");
-        resp.status(400).json("Error finding user availability", err)
+        resp.status(400).json("Error finding user availability", err);
       }
-      db("users").select("*")
+      db("users")
+        .select("*")
         .where({ username })
         .then((user) => {
           console.log("User availability : ", user);
@@ -120,8 +121,6 @@ app.post("/checkuseravailability", (req, resp) => {
         .catch((err) =>
           resp.status(400).json("Error finding user availability", err)
         );
-    })
-
     });
 });
 
