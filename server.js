@@ -11,9 +11,11 @@ const clarifaiApp = new Clarifai.App({
 
 var db = require("knex")({
   client: "pg",
+  connection: process.env.DATABASE_URL,
+
   connection: {
     connectionString: process.env.DATABASE_URL,
-    ssl: true,
+    ssl: { rejectUnauthorized: false },
   },
 });
 
