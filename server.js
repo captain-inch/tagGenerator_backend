@@ -82,7 +82,9 @@ app.post("/register", (req, resp) => {
           })
           .then(trx.commit);
       })
-      .catch((err) => resp.status(400).json("Unable to register user"));
+      .catch((err) =>
+        resp.status(400).json("Unable to register user ... ", err)
+      );
   });
 });
 
