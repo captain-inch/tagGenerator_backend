@@ -106,6 +106,7 @@ app.post("/checkuseravailability", (req, resp) => {
         .from("users")
         .where({ username })
         .then((user) => {
+          console.log("User availability : ", user);
           if (user.length) {
             exists.username = false;
             console.log("Username already exists");
