@@ -60,7 +60,6 @@ app.post("/register", (req, resp) => {
   console.log("Register request received");
   const { username, email, password } = req.body;
   const hash = bcrypt.hashSync(password);
-  let respData = null;
   db.transaction((trx) => {
     trx
       .insert({
