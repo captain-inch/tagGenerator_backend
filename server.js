@@ -92,10 +92,15 @@ app.post("/register", (req, resp) => {
 app.post("/checkuseravailability", (req, resp) => {
   const { email, username } = req.body;
   let exists = { username: true, email: true };
-  db.select("*")
-    .from("users")
+  db("users")
+    .select("*")
     .where({ email })
     .then((user) => {
+      console.log("======== USER AVAILABILITY ========");
+      console.log("Response from querry for email : ", email);
+      console.log("user");
+      console.log("End of response");
+
       if (user.length) {
         exists.email = false;
         console.log("Email already exists");
