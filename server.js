@@ -98,7 +98,7 @@ app.post("/checkuseravailability", (req, resp) => {
     .then((user) => {
       console.log("======== USER AVAILABILITY ========");
       console.log("Response from querry for email : ", email);
-      console.log("user");
+      console.log(user);
       console.log("End of response");
 
       if (user.length) {
