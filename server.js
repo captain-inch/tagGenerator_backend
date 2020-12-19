@@ -12,10 +12,8 @@ const clarifaiApp = new Clarifai.App({
 var db = require("knex")({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "postgres",
-    password: "",
-    database: "tagGenerator",
+    host: process.env.DATABASE_URL,
+    ssl: true,
   },
 });
 
