@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { gsap } from "gsap";
 import Skill from "./skill.jsx";
+import { GiSkills } from "react-icons/gi";
 export default class Skills extends Component {
   componentDidMount() {}
   render() {
     return (
       <article id="Skills">
-        <h1>Skills</h1>
+        <h1>
+          <GiSkills /> <span className="pa3">Skills</span>
+        </h1>
         <div className="flex flex-wrap justify-around">
           <Skill
             name="Front-end"

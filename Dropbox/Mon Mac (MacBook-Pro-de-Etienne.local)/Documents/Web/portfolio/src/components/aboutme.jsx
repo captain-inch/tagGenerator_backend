@@ -1,19 +1,33 @@
 import React, { Component } from "react";
 import { gsap } from "gsap";
 import profile from "./../media/img/profile2.png";
+import {
+  FaUserGraduate,
+  FaLaptopCode,
+  FaRegPaperPlane,
+  FaRegLightbulb,
+} from "react-icons/fa";
+import { CgBoy } from "react-icons/cg";
+
 export default class AboutMe extends Component {
   componentDidMount() {}
   render() {
     return (
       <div id="AboutMe" className="w-100 pa3">
-        <h1>About me</h1>
+        <h1 className="tcem v-mid">
+          <FaRegLightbulb /> <span className="pa3">About me</span>
+        </h1>
         <div className="flex flex-row-l flex-column contents-center tj">
           <div>
-            <h2>Youth</h2>
+            <h2>
+              <CgBoy /> <span className="pa3">Youth</span>
+            </h2>
             Born in 93 in Toulouse, I grew up watching my older brother
             discovering the 2000's internet era. During my teenage years, I
             started discovering web programming and really enjoyed its logic.
-            <h2>Engineering</h2>
+            <h2>
+              <FaUserGraduate /> <span className="pa3">Engineering</span>
+            </h2>
             After graduating from high school in{" "}
             <span className="year">2011</span>, I enrolled for a mechanical
             engineering degree. The choice of my major was not easy for me, as I
@@ -24,7 +38,10 @@ export default class AboutMe extends Component {
             learn to code in Python, Java, and to extend my knownledge in web
             development. I graduated from Polytech Montpellier with a M.Eng in{" "}
             <span className="year">2016</span>
-            <h2>Aeronautics</h2>
+            <h2>
+              <FaRegPaperPlane />
+              <span className="pa3">Aeronautics</span>
+            </h2>
             Alongside with my engineering degree, I started taking flight
             lessons. I enjoyed the freedom that flying gave me. In 2015, I
             managed to complet my PPL (Private Pilot Licence). In{" "}
@@ -33,7 +50,10 @@ export default class AboutMe extends Component {
             France for their cadet program and managed to enroll for two years
             of professionnal pilot training across France and also Florida. I
             obtained my CPL (Commercial Pilot Licence) in late
-            <span className="year"> 2020</span>. <h2>Web development</h2>
+            <span className="year"> 2020</span>.
+            <h2>
+              <FaLaptopCode /> <span className="pa3">Web development</span>
+            </h2>
             At the end of my program, I took again some online classes for
             several months, in order to acquire precise knownledge about the
             latests technologies and frameworks used. The fact that the course

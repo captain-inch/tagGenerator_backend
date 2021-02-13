@@ -11,12 +11,11 @@ import Anchor from "./components/anchor.jsx";
 import Hero from "./components/hero.jsx";
 import AboutMe from "./components/aboutme.jsx";
 import Skills from "./components/skills/skills.jsx";
-import Projects from "./components/projects.jsx";
+import Projects from "./components/projects/projects.jsx";
 import Contact from "./components/contact/contact.jsx";
 
 // ====   >   FILES
 import { links } from "./components/navbar/navbar_content.jsx";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default class App extends Component {

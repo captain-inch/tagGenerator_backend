@@ -5,14 +5,17 @@ import { RiCake2Line } from "react-icons/ri";
 import { BiMapPin } from "react-icons/bi";
 import { FiPhone } from "react-icons/fi";
 import { ImGithub } from "react-icons/im";
-
+import { AiOutlineMessage } from "react-icons/ai";
 const iconFill = "white";
 export default class Contact extends Component {
   componentDidMount() {}
   render() {
     return (
       <div id="Contact" className="f4-l f5-m tc1">
-        <h1>Contact</h1>
+        <h1>
+          <AiOutlineMessage />
+          <span className="pa3">Contact</span>
+        </h1>
         <div className="flex flex-wrap justify-around items-center flex-row-l">
           <div className="ma2 flex flex-column items-center">
             <BsPersonCheck size={40} />
